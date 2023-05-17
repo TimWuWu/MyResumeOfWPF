@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="MyResumeOfWPF.InputEducationControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyResumeOfWPF"
+             mc:Ignorable="d">
+    <Grid>
+        <Rectangle>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0,0" StartPoint="1,1">
+                    <GradientStop Color="#DBEFF0" Offset="0"/>
+                    <GradientStop Color="#FFFFFFFF" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+            <Rectangle.Effect>
+                <DropShadowEffect Direction="245" BlurRadius="10" ShadowDepth="5"  />
+            </Rectangle.Effect>
+        </Rectangle>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" 
+                Margin="2,2,0,2" FontWeight="Black">学习阶段</Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" 
+                Margin="2,32,0,2" FontWeight="Black">学校名称</Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" 
+                Margin="2,62,0,2" FontWeight="Black">入学时间</Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" 
+                Margin="2,92,0,2" FontWeight="Black">学习周期</Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" 
+                Margin="2,122,0,2" FontWeight="Black">学习专业</Button>
+        <Button HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20" 
+                Margin="0,160,80,2" FontWeight="Black" Background="DarkGray"
+                Click="Button_Click_1" >清除</Button>
+        <Button HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20" 
+                Margin="0,160,20,2" FontWeight="Black" Background="DarkGray"
+                Click="Button_Click" >保存</Button>
+        <TextBox x:Name="StageInputLabel" Text="{Binding Path=StageColumn}"
+                FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top" Margin="82,4,0,0" Width="400"/>
+        <TextBox x:Name="SchoolInputLabel" Text="{Binding Path=SchoolnameColumn}"
+                FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top" Margin="82,34,0,0" />
+        <TextBox x:Name="StartInputLabel" Text="{Binding Path=StartColumn}"
+                FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top" Margin="82,62,0,0" />
+        <TextBox x:Name="PeriodInputLabel" Text="{Binding Path=PeriodColumn}"
+                FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top" Margin="82,92,0,0" />
+        <TextBox x:Name="MajoyInputLabel" Text="{Binding Path=MajoyColumn}"
+                FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top" Margin="82,122,0,0" />
+    </Grid>
+</UserControl>

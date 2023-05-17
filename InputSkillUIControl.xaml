@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="MyResumeOfWPF.InputSkillUIControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyResumeOfWPF"
+             mc:Ignorable="d" >
+    <Grid>
+        <Rectangle>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0,0" StartPoint="1,1">
+                    <GradientStop Color="#DBEFF0" Offset="0"/>
+                    <GradientStop Color="#FFFFFFFF" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+            <Rectangle.Effect>
+                <DropShadowEffect Direction="245" BlurRadius="10" ShadowDepth="5"  />
+            </Rectangle.Effect>
+        </Rectangle>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" 
+                Margin="2,2,0,2" FontWeight="Black">技能名称</Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" 
+                Margin="2,32,0,2" FontWeight="Black">关键点一</Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" 
+                Margin="2,62,0,2" FontWeight="Black">关键点二</Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" 
+                Margin="2,92,0,2" FontWeight="Black">关键点三</Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" 
+                Margin="2,122,0,2" FontWeight="Black">关键点四</Button>
+        <Button HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20" 
+                Margin="2,158,80,2" FontWeight="Black" Background="DarkGray" 
+                Click="Button_Click">删除</Button>
+        <Button HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20" 
+                Margin="0,158,20,2" FontWeight="Black" Background="DarkGray" Click="Button_Click_1"
+                >保存</Button>
+        <TextBox x:Name="TopicInputLabel" Text="{Binding Path=TopicColumn}"
+                FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top" Margin="80,4,0,0" Width="400"/>
+        <TextBox x:Name="ComponentOneInputLabel" Text="{Binding Path=ComponentOneColumn}"
+                FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top" Margin="80,34,0,0" />
+        <TextBox x:Name="ComponentTwoInputLabel" Text="{Binding Path=ComponentTwoColumn}"
+                FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top" Margin="80,62,0,0" />
+        <TextBox x:Name="ComponentThreeInputLabel" Text="{Binding Path=ComponentThreeColumn}"
+                FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top" Margin="80,92,0,0" />
+        <TextBox x:Name="ComponentFourInputLabel" Text="{Binding Path=ComponentFourColumn}"
+                FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top" Margin="80,122,0,0" />
+    </Grid>
+</UserControl>

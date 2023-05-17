@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ControlTemplate x:Key="TitleTemplate" TargetType="{x:Type Label}">
+        <Canvas Background="Aqua">
+            <Image Height="50" Canvas.Right="3" Canvas.Top="0"  Source="\Images\tree.png"/>
+            <Image Height="50" Canvas.Left="3" Canvas.Top="0"   Source="\Images\treemountain.png"/>
+        </Canvas>
+    </ControlTemplate>
+    <Style x:Key="TopStyle" TargetType="Label">
+        <Setter Property="Template" Value="{StaticResource TitleTemplate}" />
+    </Style>
+</ResourceDictionary>

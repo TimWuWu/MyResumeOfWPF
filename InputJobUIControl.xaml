@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="MyResumeOfWPF.InputJobUIControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyResumeOfWPF"
+             mc:Ignorable="d">
+    <Grid>
+        <Rectangle>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0,0" StartPoint="1,1">
+                    <GradientStop Color="#DBEFF0" Offset="0"/>
+                    <GradientStop Color="#FFFFFFFF" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+            <Rectangle.Effect>
+                <DropShadowEffect Direction="245" BlurRadius="10" ShadowDepth="5"  />
+            </Rectangle.Effect>
+        </Rectangle>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" 
+                Margin="2,2,0,2" FontWeight="Black">公司名称</Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" 
+                Margin="2,32,0,2" FontWeight="Black">岗位名称</Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" 
+                Margin="2,62,0,2" FontWeight="Black">入职时间</Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" 
+                Margin="2,92,0,2" FontWeight="Black">离职时间</Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" 
+                Margin="2,122,0,2" FontWeight="Black">岗位职责</Button>
+        <Button HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20" 
+                Margin="2,158,80,2" FontWeight="Black" Background="DarkGray" 
+                Click="Button_Click" >删除</Button>
+        <Button HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20" 
+                Margin="0,158,20,2" FontWeight="Black" Background="DarkGray" Click="Button_Click_1" 
+                >保存</Button>
+        <TextBox x:Name="CompanyInputLabel" Text="{Binding Path=CompanyNameColumn}"
+                FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top" Margin="80,4,0,0" Width="400"/>
+        <TextBox x:Name="TitleInputLabel" Text="{Binding Path=TitleColumn}"
+                FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top" Margin="80,34,0,0" />
+        <TextBox x:Name="InputLabel" Text="{Binding Path=InputColumn}"
+                FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top" Margin="80,62,0,0" />
+        <TextBox x:Name="OutputInputLabel" Text="{Binding Path=OutputColumn}"
+                FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top" Margin="80,92,0,0" />
+        <TextBox x:Name="DutyInputLabel" Text="{Binding Path=DutyColumn}"
+                FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top" Margin="80,122,0,0" />    
+    </Grid>
+</UserControl>

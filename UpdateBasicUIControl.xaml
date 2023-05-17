@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="MyResumeOfWPF.UpdateBasicUIControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyResumeOfWPF"
+             mc:Ignorable="d">
+    <Grid>
+        <Rectangle>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0,0" StartPoint="1,1">
+                    <GradientStop Color="#DBEFF0" Offset="0"/>
+                    <GradientStop Color="#FFFFFFFF" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+            <Rectangle.Effect>
+                <DropShadowEffect Direction="245" BlurRadius="10" ShadowDepth="5"  />
+            </Rectangle.Effect>
+        </Rectangle>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" 
+                Margin="2,2,0,2" FontWeight="Black">姓名</Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" 
+                Margin="2,32,0,2" FontWeight="Black">年龄</Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" 
+                Margin="2,62,0,2" FontWeight="Black">工龄</Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" 
+                Margin="2,92,0,2" FontWeight="Black">电话</Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" 
+                Margin="2,122,0,2" FontWeight="Black">邮箱</Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" 
+                Margin="2,152,0,2" FontWeight="Black">地址</Button>
+        <Button HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20" 
+                Margin="0,190,20,2" FontWeight="Black" Background="DarkGray"
+                Width="120" Click="Button_Click" >上传或更新</Button>
+        <TextBox x:Name="NameInputLabel" Text="{Binding Path=NameColumn}"
+                FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top" Margin="48,4,0,0" Width="400"/>
+        <TextBox x:Name="AgeInputLabel" Text="{Binding Path=AgeColumn}"
+                FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top" Margin="48,34,0,0" />
+        <TextBox x:Name="ExperienceInputLabel" Text="{Binding Path=ExperienceColumn}"
+                FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top" Margin="48,62,0,0" />
+        <TextBox x:Name="PhoneInputLabel" Text="{Binding Path=PhonenumberColumn}"
+                FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top" Margin="48,92,0,0" />
+        <TextBox x:Name="EmailInputLabel" Text="{Binding Path=EmailColumn}"
+                FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top" Margin="48,122,0,0" />
+        <TextBox x:Name="AddressInputLabel" Text="{Binding Path=AddressColumn}"
+                FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top" Margin="48,152,0,0" />
+    </Grid>
+</UserControl>

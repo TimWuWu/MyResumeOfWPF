@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="MyResumeOfWPF.JobUIControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyResumeOfWPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" Name="JobControl">
+    <UserControl.Resources>
+        <DataTemplate x:Key="InputTemplate">
+            <TextBlock Text="{Binding}"/>
+        </DataTemplate>
+        <Style x:Key="InputStyle" TargetType="Label">
+            <Setter Property="ContentTemplate" Value="{DynamicResource InputTemplate}" />
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Rectangle >
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0,0" StartPoint="1,1">
+                    <GradientStop Color="#808080" Offset="0"/>
+                    <GradientStop Color="#FFFFFFFF" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+            <Rectangle.Effect>
+                <DropShadowEffect Direction="245" BlurRadius="10" ShadowDepth="5"  />
+            </Rectangle.Effect>
+        </Rectangle>
+        <Button HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="15" 
+                Margin="2,2,0,2" FontWeight="Black">公司名称</Button>
+        <Button HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="15" 
+                Margin="2,29,0,2" FontWeight="Black">职位名称</Button>
+        <Button HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="15" 
+                Margin="2,55,0,2" FontWeight="Black">入职时间</Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" 
+                Margin="2,81,0,2" FontWeight="Black">去职时间</Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" 
+                Margin="2,108,0,2" FontWeight="Black">岗位职责</Button>
+        <Label x:Name="CompanyLabel" Content="{Binding Path=CompanyName, ElementName=JobControl, Mode=Default}"
+                Style="{DynamicResource InputStyle}" HorizontalAlignment="Left" 
+                VerticalAlignment="Top" Margin="70,1,0,0" />
+        <Label x:Name="TitleLabel" Content="{Binding Path=Title, ElementName=JobControl, Mode=Default}"
+                Style="{DynamicResource InputStyle}" HorizontalAlignment="Left" 
+                VerticalAlignment="Top" Margin="70,28,0,3" />
+        <Label x:Name="InputLabel" Content="{Binding Path=Input, ElementName=JobControl, Mode=Default}"
+                Style="{DynamicResource InputStyle}" HorizontalAlignment="Left" 
+                VerticalAlignment="Top" Margin="70,53,0,3" />
+        <Label x:Name="OutputLabel" Content="{Binding Path=Output, ElementName=JobControl, Mode=Default}"
+                Style="{DynamicResource InputStyle}" HorizontalAlignment="Left" 
+                VerticalAlignment="Top" Margin="70,80,0,3" />
+        <Label x:Name="DutyLabel" Content="{Binding Path=Duty, ElementName=JobControl, Mode=Default}"
+                Style="{DynamicResource InputStyle}" HorizontalAlignment="Left" 
+                VerticalAlignment="Top" Margin="70,105,0,3" />
+    </Grid>
+</UserControl>
